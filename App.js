@@ -6,6 +6,7 @@ import AppNavigator from './navigation/AppNavigator'
 import LoginScreen from './components/LoginScreen'
 import ReactImagePicker from './components/ReactImagePicker'
 import ReactIcon from './components/ReactIcon'
+import AsbProjectTwo from './components/AsbProjectTwo'
 
 const App = () => {
   return (
@@ -17,9 +18,11 @@ const App = () => {
 
       {/* <GoogleScreen/> */}
 
-      <ReactImagePicker />
+      {/* <ReactImagePicker /> */}
 
       {/* <ReactIcon/> */}
+
+      <AsbProjectTwo />
 
     </View>
   )
