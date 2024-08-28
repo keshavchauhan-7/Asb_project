@@ -7,6 +7,8 @@ import LoginScreen from './components/LoginScreen'
 import ReactImagePicker from './components/ReactImagePicker'
 import ReactIcon from './components/ReactIcon'
 import AsbProjectTwo from './components/AsbProjectTwo'
+import VideoCapture from './components/VideoCapture'
+import Permissions from './components/Permissions'
 
 const App = () => {
   return (
@@ -22,7 +24,10 @@ const App = () => {
 
       {/* <ReactIcon/> */}
 
-      <AsbProjectTwo />
+      {/* <AsbProjectTwo /> */}
+
+      <VideoCapture/>
+      <Permissions/>
 
     </View>
   )
