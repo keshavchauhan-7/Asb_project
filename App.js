@@ -10,7 +10,7 @@ import AsbProjectTwo from './components/AsbProjectTwo'
 import VideoCapture from './components/VideoCapture'
 import Permissions from './components/Permissions'
 import CryptoApp from './components/CryptoApp'
-// import FingerprintScreen from './components/FingerPrintScreen'
+import AsbProjectTask from './components/AsbProjectTask'
 
 const App = () => {
   return (
@@ -31,10 +31,9 @@ const App = () => {
       {/* <VideoCapture/> */}
       {/* <Permissions/> */}
 
-      <CryptoApp/>
+      {/* <CryptoApp/> */}
 
-      {/* <FingerprintScreen/> */}
-
+      <AsbProjectTask/>
 
     </View>
   )
