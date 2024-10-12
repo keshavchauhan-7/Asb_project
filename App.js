@@ -16,7 +16,7 @@ const App = () => {
   return (
     <View style={{ flex: 1 }}>
 
-      {/* <AppNavigator /> */}
+      <AppNavigator />
 
       {/* <AsbProject /> */}
 
@@ -33,7 +33,7 @@ const App = () => {
 
       {/* <CryptoApp/> */}
 
-      <AsbProjectTask/>
+      {/* <AsbProjectTask/> */}
 
     </View>
   )

@@ -1,12 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient'; // Importing LinearGradient
+import LinearGradient from 'react-native-linear-gradient';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Swiper from 'react-native-swiper';
 import PieChart from 'react-native-pie-chart'
-
-
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const AsbProjectTask = () => {
 
@@ -14,8 +13,10 @@ const AsbProjectTask = () => {
     const series = [170, 321]
     const sliceColor = ['blue', 'skyblue']
     return (
+
         <ScrollView style={styles.container}>
 
+            {/* background image */}
             <View style={styles.imageContainer}>
                 <Image
                     style={styles.mainImage}
@@ -30,16 +31,19 @@ const AsbProjectTask = () => {
                 />
             </View>
 
+            {/* welcome text & image */}
             <View style={styles.logoText}>
                 <Image source={require('../assets/mountain.png')} resizeMode="contain" style={styles.mountain} />
                 <Text style={{ color: '#fff', fontSize: 25, fontWeight: 'bold', position: 'relative', bottom: 20 }}>Welcome</Text>
             </View>
 
+            {/* icons */}
             <View style={{ position: 'relative', left: 312, bottom: 40, display: 'flex', flexDirection: 'row', gap: 10 }}>
                 <MaterialCommunityIcons name="message" size={30} color='#606060' />
                 <MaterialCommunityIcons name="account-circle" size={30} color='#ff5c00' />
             </View>
 
+            {/* did you know box */}
             <View style={styles.box}>
 
                 {/* Top Gradient */}
@@ -74,8 +78,9 @@ const AsbProjectTask = () => {
                 </View>
             </View>
 
-            <View style={{ margin: 20, marginTop: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
-                <Text style={{ color: '#fff', fontSize: 25, fontWeight: 'bold' }}>Auctions</Text>
+            {/* auction text & live button */}
+            <View style={{ margin: 20, marginTop: 10, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                <Text style={{ color: '#fff', fontSize: 20, fontWeight: 'bold' }}>Auctions</Text>
                 <TouchableOpacity
                     style={{
                         backgroundColor: '#3DC6C1',
@@ -91,6 +96,7 @@ const AsbProjectTask = () => {
                 </TouchableOpacity>
             </View>
 
+            {/* godzilla box */}
             <View style={{ width: '90%', height: 200, marginTop: -8, backgroundColor: '#3DC6C1', marginLeft: 20, borderRadius: 20 }}>
 
                 <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', }}>
@@ -107,6 +113,7 @@ const AsbProjectTask = () => {
 
             </View>
 
+            {/* four dots */}
             <View style={{ marginTop: 10, alignItems: 'center', justifyContent: 'center', gap: 8, flexDirection: 'row' }}>
                 <View style={{ height: 9, width: 9, borderRadius: 50, backgroundColor: '#57ebb0' }}></View>
                 <View style={{ height: 8, width: 8, borderRadius: 50, backgroundColor: 'gray' }}></View>
@@ -114,10 +121,13 @@ const AsbProjectTask = () => {
                 <View style={{ height: 8, width: 8, borderRadius: 50, backgroundColor: 'gray' }}></View>
             </View>
 
+            {/* view all text */}
             <Text style={{ textAlign: 'right', marginRight: 20, color: 'orange', marginTop: -12, fontWeight: 'bold' }}>View All</Text>
 
+            {/* trading board text */}
             <Text style={{ fontSize: 20, marginLeft: 20, marginTop: 10, fontWeight: 'bold', color: '#fff' }}>Trading board</Text>
 
+            {/* stocks swipper */}
             <View style={{ height: 210 }}>
                 <Swiper style={styles.wrapper} showsButtons={false}
                     dotColor="grey"
@@ -143,8 +153,8 @@ const AsbProjectTask = () => {
                                     <AntDesign name="star" size={30} color='#f6aa1c' />
                                 </View>
                             </View>
-                            <Text style={{ marginLeft: 10, fontSize: 20, fontWeight: 'bold', marginTop: -7 }}>53.39</Text>
-                            <Text style={{ marginLeft: 10, fontSize: 20, marginTop: -7, color: 'purple' }}>10.12%</Text>
+                            <Text style={{ marginLeft: 10, fontSize: 20, fontWeight: 'bold', color: '#fff', marginTop: -7 }}>53.39</Text>
+                            <Text style={{ marginLeft: 10, fontSize: 20, marginTop: -7, color: '#875692' }}>10.12%</Text>
                         </View>
                     </View>
                     <View style={styles.slide}>
@@ -165,16 +175,19 @@ const AsbProjectTask = () => {
                                     <AntDesign name="star" size={30} color='#f6aa1c' />
                                 </View>
                             </View>
-                            <Text style={{ marginLeft: 10, fontSize: 20, fontWeight: 'bold', marginTop: -7 }}>53.39</Text>
-                            <Text style={{ marginLeft: 10, fontSize: 20, marginTop: -7, color: 'purple' }}>10.12%</Text>
+                            <Text style={{ marginLeft: 10, fontSize: 20, fontWeight: 'bold', color: '#fff', marginTop: -7 }}>53.39</Text>
+                            <Text style={{ marginLeft: 10, fontSize: 20, marginTop: -7, color: '#875692' }}>10.12%</Text>
                         </View>
                     </View>
                 </Swiper>
-                <Text style={{ textAlign: 'right', marginRight: 20, color: 'orange', position:'relative', bottom:25, fontWeight: 'bold' }}>View All</Text>
+                <Text style={{ textAlign: 'right', marginRight: 20, color: 'orange', position: 'relative', bottom: 25, fontWeight: 'bold' }}>View All</Text>
 
             </View>
 
+            {/* portfolio text */}
             <Text style={{ fontSize: 20, marginLeft: 20, marginTop: 10, fontWeight: 'bold', color: '#fff' }}>My Portfolio</Text>
+
+            {/* my portfolio section */}
             <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 12 }}>
                 <View style={styles.portfolioBox}>
 
@@ -193,6 +206,7 @@ const AsbProjectTask = () => {
 
                 </View>
 
+                {/* piechart */}
                 <PieChart
                     widthAndHeight={widthAndHeight}
                     series={series}
@@ -201,7 +215,76 @@ const AsbProjectTask = () => {
                 />
 
             </View>
+
+            {/* mountain image */}
             <Image source={require('../assets/mountain.png')} resizeMode="contain" style={styles.chartimage} />
+
+            {/* $50.00 */}
+            <View style={{ width: '90%', height: 150, marginTop: -8, borderWidth: 4, borderColor: '#723113', backgroundColor: '#2e1503', marginLeft: 20, borderRadius: 20 }}>
+
+                <View style={{ margin: 20 }}>
+                    <View style={{ height: 45, width: 45, borderRadius: 50, alignItems: 'center', justifyContent: 'center', backgroundColor: '#b87333' }}>
+                        <Ionicons name="document-text-outline" size={30} color='#2e1503' />
+                    </View>
+                    <Text style={{ color: '#fff', paddingTop: 5 }}>Avialable Cash</Text>
+                    <Text style={{ color: '#fff', paddingTop: 2, fontSize: 25, fontWeight: 'bold' }}>$50.00</Text>
+                </View>
+
+                <View style={{ width: '70%', height: 40, marginTop: 20, backgroundColor: '#b87333', alignItems: 'center', justifyContent: 'center', position: 'relative', bottom: 170, left: 107, borderTopRightRadius: 20, borderBottomLeftRadius: 20 }}>
+                    <Text style={{ color: '#2e1503', fontSize: 15, fontWeight: 'bold' }}>Deposite fund and start trading</Text>
+                </View>
+                <TouchableOpacity style={{ position: 'relative', bottom: 130, left: 250, borderRadius: 20, width: 80, backgroundColor: '#3DC6C1', }}>
+                    <Text style={{ textAlign: 'center', padding: 12, color: '#000', fontSize: 18, fontWeight: 'bold' }}>Add</Text>
+                </TouchableOpacity>
+
+            </View>
+
+            {/* my promotions text & live button */}
+            <View style={{ marginHorizontal: 20, marginTop: 30, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                <Text style={{ color: '#fff', fontSize: 20, fontWeight: 'bold' }}>My Promotions</Text>
+                <TouchableOpacity
+                    style={{
+                        backgroundColor: '#3DC6C1',
+                        padding: 12,
+                        borderRadius: 20,
+                        flexDirection: 'row',
+                        gap: 10,
+                        justifyContent: 'flex-between'
+                    }}
+                >
+                    <AntDesign name="wifi" size={20} color={'#000'} />
+                    <Text style={{ color: '#000', fontWeight: 'bold' }}>Live</Text>
+                </TouchableOpacity>
+            </View>
+
+            {/* godzilla box */}
+            <View style={{ width: '90%', height: 200, marginTop: 10, backgroundColor: '#3DC6C1', marginLeft: 20, borderRadius: 20 }}>
+
+                <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', }}>
+                    <Image source={require('../assets/approved.png')} resizeMode="contain" style={styles.approved} />
+                    <View opacity={0.7} style={{ width: '60%', height: 50, marginTop: 20, backgroundColor: 'gray', position: 'relative', bottom: 25, borderTopRightRadius: 20, borderBottomLeftRadius: 20 }}>
+                        <Text style={{ textAlign: 'center', marginTop: 12, color: '#fff', fontSize: 15, fontWeight: 'bold' }}>Auction Ends In <Text style={{ color: '#3DC6C1' }}>1d 7h 6m 5s</Text></Text>
+                    </View>
+                </View>
+
+                <View opacity={0.7} style={{ width: '100%', height: 80, marginTop: 10, backgroundColor: 'gray' }}>
+                    <Text style={{ fontSize: 35, fontWeight: 'bold', marginLeft: 8, marginTop: 5, color: '#fff' }}>Godzilla</Text>
+                    <Text style={{ fontSize: 20, marginLeft: 8, marginTop: -8, color: '#fff' }}>Spain, Santander</Text>
+                </View>
+
+            </View>
+
+            {/* four dots */}
+            <View style={{ marginTop: 10, alignItems: 'center', justifyContent: 'center', gap: 8, flexDirection: 'row' }}>
+                <View style={{ height: 9, width: 9, borderRadius: 50, backgroundColor: '#57ebb0' }}></View>
+                <View style={{ height: 8, width: 8, borderRadius: 50, backgroundColor: 'gray' }}></View>
+                <View style={{ height: 8, width: 8, borderRadius: 50, backgroundColor: 'gray' }}></View>
+                <View style={{ height: 8, width: 8, borderRadius: 50, backgroundColor: 'gray' }}></View>
+            </View>
+
+            {/* view all text */}
+            <Text style={{ textAlign: 'right', marginRight: 20, color: 'orange', marginTop: -12, fontWeight: 'bold' }}>View All</Text>
+
         </ScrollView>
     );
 };
@@ -211,6 +294,7 @@ export default AsbProjectTask;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: 'black',
     },
     imageContainer: {
         position: 'absolute', // Important to overlay the gradient on the image
@@ -276,7 +360,7 @@ const styles = StyleSheet.create({
         width: 340,
         height: 150,
         borderRadius: 20,
-        backgroundColor: '#b87333',
+        backgroundColor: '#2e1503',
         borderWidth: 4,
         borderColor: '#723113'
     },
