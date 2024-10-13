@@ -11,12 +11,13 @@ import VideoCapture from './components/VideoCapture'
 import Permissions from './components/Permissions'
 import CryptoApp from './components/CryptoApp'
 import AsbProjectTask from './components/AsbProjectTask'
+import Api from './components/Api'
 
 const App = () => {
   return (
     <View style={{ flex: 1 }}>
 
-      <AppNavigator />
+      {/* <AppNavigator /> */}
 
       {/* <AsbProject /> */}
 
@@ -34,6 +35,8 @@ const App = () => {
       {/* <CryptoApp/> */}
 
       {/* <AsbProjectTask/> */}
+
+      <Api/>
 
     </View>
   )
